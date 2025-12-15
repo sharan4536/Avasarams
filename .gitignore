@@ -45,3 +45,6 @@ next-env.d.ts
 # sitemaps
 public/sitemap.xml
 public/sitemap-*.xml
+
+# Local Netlify folder
+.netlify

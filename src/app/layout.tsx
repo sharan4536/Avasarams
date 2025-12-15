@@ -125,8 +125,12 @@ export default function RootLayout({
           <GoogleAnalytics />
           <SmoothScroll>
             {children}
-            <SpeedInsights />
-            <Analytics />
+            {process.env.NEXT_PUBLIC_ENABLE_VERCEL_ANALYTICS === "true" && (
+              <>
+                <SpeedInsights />
+                <Analytics />
+              </>
+            )}
           </SmoothScroll>
         </BackgroundProvider>
       </body>
